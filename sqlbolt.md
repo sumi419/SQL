@@ -21,7 +21,7 @@ FROM mytable;*
 
 
 ### SQL Lesson 2: Queries with constraints (Pt. 1) ###
-####Select query with constraints####
+#### Select query with constraints ####
 *SELECT column, another_column, …
 FROM mytable
 WHERE condition
