@@ -72,19 +72,19 @@ SELECT * FROM movies
 WHERE title LIKE "WALL-_";
 
 ### SQL Lesson 4: Filtering and sorting Query results ###
-####Select query with unique results####
+####Select query with unique results#### 
 *SELECT DISTINCT column, another_column, …
 FROM mytable
 WHERE condition(s);*
 (distinct removes duplicate rows)
 
-####Select query with ordered results####
+####Select query with ordered results #### 
 *SELECT column, another_column, …
 FROM mytable
 WHERE condition(s)
 ORDER BY column ASC/DESC;*
 
-####Limiting results to a subset(Limiting results to a subset)####
+####Limiting results to a subset(Limiting results to a subset)#### 
 *SELECT column, another_column, …
 FROM mytable
 WHERE condition(s)
