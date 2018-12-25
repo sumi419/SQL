@@ -91,7 +91,7 @@ FROM mytable
 WHERE condition(s)
 ORDER BY column ASC/DESC
 LIMIT num_limit OFFSET num_offset;*
-*The LIMIT will reduce the number of rows to return, and the optional OFFSET will specify where to begin counting the number rows from.*
+*The LIMIT will reduce the number of rows to return, and the optional OFFSET will specify where to begin counting the number rows from.*  
 (offset will start from the number you set it ahead by, for example if you want to start counting from the next 5 you would OFFSET 5)
 
 1.SELECT DISTINCT director FROM movies
@@ -111,3 +111,36 @@ LIMIT 5;
 SELECT title FROM movies
 ORDER BY title ASC
 LIMIT 5 OFFSET 5;
+
+#### SQL Lesson 5 Review: Simple SELECT Queries ####
+SELECT query  
+*SELECT column, another_column, …
+FROM mytable
+WHERE condition(s)
+ORDER BY column ASC/DESC
+LIMIT num_limit OFFSET num_offset;*
+
+1.SELECT city, population FROM north_american_cities
+WHERE country = "Canada";
+
+2.SELECT city, latitude FROM north_american_cities
+WHERE country = "United States"
+ORDER BY latitude DESC;
+
+3.SELECT city, longitude FROM north_american_cities
+WHERE longitude < -87.629798
+ORDER BY longitude ASC;
+
+3.List the two largest cities in Mexico (by population)  
+more than 2 search results, use limit 2  
+SELECT city, population FROM north_american_cities
+WHERE country LIKE "Mexico"
+ORDER BY population DESC
+LIMIT 2;
+
+4.List the third and fourth largest cities (by population) in the United States and their population  
+must offset the search by two values so it starts from the 3rd largest instead of the first largest city  
+SELECT city, population FROM north_american_cities
+WHERE country LIKE "United States"
+ORDER BY population DESC
+LIMIT 2 OFFSET 2;
