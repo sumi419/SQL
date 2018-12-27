@@ -144,3 +144,33 @@ SELECT city, population FROM north_american_cities
 WHERE country LIKE "United States"
 ORDER BY population DESC
 LIMIT 2 OFFSET 2;
+
+#### SQL Lesson 6: Multi-table queries with JOINs ####
+### Select query with INNER JOIN on multiple tables ###
+*SELECT column, another_table_column, …
+FROM mytable
+INNER JOIN another_table 
+    ON mytable.id = another_table.id
+WHERE condition(s)
+ORDER BY column, … ASC/DESC
+LIMIT num_limit OFFSET num_offset;*
+
+primary key type is an auto-incrementing integer that's unique  
+The INNER JOIN is a process that matches rows from the first table and the second table which have the same key
+
+1.SELECT title, domestic_sales, international_sales 
+FROM movies
+  JOIN boxoffice
+    ON movies.id = boxoffice.movie_id;
+
+2.SELECT title, domestic_sales, international_sales
+FROM movies
+  JOIN boxoffice
+    ON movies.id = boxoffice.movie_id
+WHERE international_sales > domestic_sales;
+
+3.SELECT title, rating
+FROM movies
+  JOIN boxoffice
+    ON movies.id = boxoffice.movie_id
+ORDER BY rating DESC;
