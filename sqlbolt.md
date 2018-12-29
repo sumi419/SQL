@@ -112,7 +112,7 @@ SELECT title FROM movies
 ORDER BY title ASC
 LIMIT 5 OFFSET 5;
 
-#### SQL Lesson 5 Review: Simple SELECT Queries ####
+### SQL Lesson 5 Review: Simple SELECT Queries ###
 SELECT query  
 *SELECT column, another_column, …
 FROM mytable
@@ -145,8 +145,8 @@ WHERE country LIKE "United States"
 ORDER BY population DESC
 LIMIT 2 OFFSET 2;
 
-#### SQL Lesson 6: Multi-table queries with JOINs ####
-### Select query with INNER JOIN on multiple tables ###
+### SQL Lesson 6: Multi-table queries with JOINs ###
+#### Select query with INNER JOIN on multiple tables ####
 *SELECT column, another_table_column, …
 FROM mytable
 INNER JOIN another_table 
@@ -174,3 +174,22 @@ FROM movies
   JOIN boxoffice
     ON movies.id = boxoffice.movie_id
 ORDER BY rating DESC;
+
+### SQL Lesson 7: OUTER JOINs ###
+#### Select query with LEFT/RIGHT/FULL JOINs on multiple tables ####
+*SELECT column, another_column, …
+FROM mytable
+INNER/LEFT/RIGHT/FULL JOIN another_table 
+    ON mytable.id = another_table.matching_id
+WHERE condition(s)
+ORDER BY column, … ASC/DESC
+LIMIT num_limit OFFSET num_offset;*
+
+1.SELECT DISTINCT building FROM employees;
+
+2.SELECT * FROM buildings;
+
+3.SELECT DISTINCT building_name, role 
+FROM buildings 
+  LEFT JOIN employees
+    ON building_name = building;
