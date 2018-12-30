@@ -193,3 +193,10 @@ LIMIT num_limit OFFSET num_offset;*
 FROM buildings 
   LEFT JOIN employees
     ON building_name = building;
+
+LEFT JOIN simply includes rows from table A regardless of whether a matching row is found in B.  
+RIGHT JOIN is the same, but reversed, keeping rows in B regardless of whether a match is found in A.  
+FULL JOIN simply means that rows from both tables are kept, regardless of whether a matching row exists in the other table.  
+
+### SQL Lesson 8: A short note on NULLs ###
+#### Select query with constraints on NULL values ####
