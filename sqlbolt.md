@@ -200,3 +200,17 @@ FULL JOIN simply means that rows from both tables are kept, regardless of whethe
 
 ### SQL Lesson 8: A short note on NULLs ###
 #### Select query with constraints on NULL values ####
+
+*SELECT column, another_column, …
+FROM mytable
+WHERE column IS/IS NOT NULL
+AND/OR another_condition
+AND/OR …;*
+
+1.SELECT name, role FROM employees
+WHERE building IS NULL;
+2.SELECT DISTINCT building_name
+FROM buildings 
+  LEFT JOIN employees
+    ON building_name = building
+WHERE role IS NULL;
