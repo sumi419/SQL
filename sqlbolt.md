@@ -209,6 +209,7 @@ AND/OR …;*
 
 1.SELECT name, role FROM employees
 WHERE building IS NULL;
+
 2.SELECT DISTINCT building_name
 FROM buildings 
   LEFT JOIN employees
