@@ -215,3 +215,5 @@ FROM buildings
   LEFT JOIN employees
     ON building_name = building
 WHERE role IS NULL;
+
+### SQL Lesson 9: Queries with expressions ###
